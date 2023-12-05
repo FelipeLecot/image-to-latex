@@ -4,27 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bajá un cambio a los textos">
+  <meta name="description" content="Transforms images to latex using GPT-4-vison">
   <meta name="keywords" content="baja,cambio,ia,chatgpt">
   <meta name="author" content="Felipe Lecot">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#000000">
-  <meta property="og:title" content="Baja un cambio">
-  <meta property="og:description" content="Bajá un cambio a los textos">
-  <meta property="og:image" content="https://bajauncambio.felipelecot.com/assets/isologo-twitter.jpg">
-  <meta property="og:url" content="https://bajauncambio.felipelecot.com">
-  <meta property="og:site_name" content="Bajá un cambio">
+  <meta property="og:title" content="Image to LaTeX">
+  <meta property="og:description" content="Transforms images to latex using GPT-4-vison">
+  <meta property="og:image" content="https://latex.felipelecot.com/assets/logo.png">
+  <meta property="og:url" content="https://latex.felipelecot.com">
+  <meta property="og:site_name" content="Image to LaTeX">
   <meta property="og:locale" content="es_LA">
   <meta property="og:type" content="website">
   <meta name="twitter:site" content="@gregoriolecot">
-  <meta name="twitter:card" content="https://bajauncambio.felipelecot.com/assets/isologo-twitter.jpg">
-  <meta name="twitter:title" content="Bajá un cambio">
-  <meta name="twitter:description" content="Bajá un cambio a los textos">
-  <meta name="twitter:image" content="https://bajauncambio.felipelecot.com/assets/isologo-twitter.jpg">
-  <title>Baja un cambio</title>
+  <meta name="twitter:card" content="https://latex.felipelecot.com/assets/logo.png">
+  <meta name="twitter:title" content="Image to LaTeX">
+  <meta name="twitter:description" content="Transforms images to latex using GPT-4-vison">
+  <meta name="twitter:image" content="https://latex.felipelecot.com/assets/logo.png">
+  <title>Image to LaTeX</title>
   <link rel="shortcut icon" href="./assets/logo-small.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/styles.css?nocachekey=9475872658726358976238457628576">
-  <link rel="icon" href="./assets/logo-small.png" type="image/x-icon">
+  <link rel="icon" href="./assets/logo-small.jpg" type="image/x-icon">
   <script src="https://unpkg.com/htmx.org@1.9.9"
     integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX"
     crossorigin="anonymous"></script>
@@ -32,28 +32,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQW9ND3135"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWDD29YRK7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'G-YQW9ND3135');
+    gtag('config', 'G-DWDD29YRK7');
   </script>
 </head>
 
 <body hx-ext="loading-states">
   <header>
-    <img src="./assets/isologo.png" width="250" alt="Logo de Baja un cambio">
+    <img src="./assets/logo.png" width="150" alt="Image to LaTeX Logo">
   </header>
   <main>
     <div class="card">
-      <form id="form" hx-get="/tranquilizar" hx-target="#result" hx-swap="innerHTML" hx-trigger="submit"
+      <form id="form" accept="image/x-png,image/gif,image/jpeg" hx-post="http://localhost:3000/latex" hx-encoding='multipart/form-data' hx-target="#result" hx-swap="innerHTML" hx-trigger="submit"
         data-loading-target="#loading" data-loading-class-remove="hidden">
-        <label for="inputText">Escribí algo:</label>
-        <textarea minlength="25" maxlength="500" pattern=".{25,500}" type="text" name="text" id="inputText"
-          placeholder="Escribí acá"></textarea>
-        <button id="submit" data-loading-disable>Enviar</button>
+        <label for="inputText">Select an image:</label>
+        <input type="file" name="image" id="inputText" placeholder="Select an image" />
+        <button id="submit" data-loading-disable>Send</button>
       </form>
       <div id="loading" class="hidden">
         <i class="fa-solid fa-rotate fa-spin"></i>
@@ -65,26 +64,20 @@
   <footer>
     <div class="credit-cards">
       <div class="credits">
-        <p>Idea original por: <a href="https://twitter.com/juliancapo98" target="_blank"
-            referrerpolicy="no-referrer">Julián Príncipe</a></p>
-      </div>
-      <div class="credits">
-        <p>Creado por: <a href="https://www.twitter.com/gregoriolecot" target="_blank"
+        <p>Created by: <a href="https://www.twitter.com/gregoriolecot" target="_blank"
             referrerpolicy="no-referrer">Felipe Lecot</a></p>
       </div>
       <div class="credits">
-        <p>Ver código en <a href="https://github.com/FelipeLecot/baja-un-cambio" target="_blank"
+        <p>Source <a href="https://github.com/FelipeLecot/image-to-latex" target="_blank"
             referrerpolicy="no-referrer">GitHub</a></p>
       </div>
     </div>
-    <p>Desarrollado por <a href="https://www.felipelecot.com" target="_blank" referrerpolicy="no-referrer">Felipe
-        Lecot</a> © 2023. Todos los derechos reservados.</p>
+    <p>Developed by <a href="https://www.felipelecot.com" target="_blank" referrerpolicy="no-referrer">Felipe
+        Lecot</a> © 2023. All rights reserved.</p>
   </footer>
   <script>
     document.getElementById("form").addEventListener("submit", () => {
-      gtag("event", "form_submit", {
-        prompt: document.getElementById("inputText").value,
-      });
+      gtag("event", "form_submit");
     })
   </script>
 </body>
