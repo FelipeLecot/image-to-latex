@@ -1,3 +1,7 @@
+body { 
+  margin: 0
+}
+
 main {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -22,14 +26,12 @@ body {
   text-align: center;
 }
 
-textarea {
+input {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
   margin-bottom: 10px;
-  resize: vertical;
-  max-height: 250px;
-  min-height: 50px;
+  text-align: center;
 }
 
 #result, #loading {
@@ -37,7 +39,7 @@ textarea {
 }
 
 footer {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
   color: #888;
   margin-top: auto;
