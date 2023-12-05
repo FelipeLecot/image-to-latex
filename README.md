@@ -1,10 +1,7 @@
-# Baja un cambio
-Basado en la app de [Julián Príncipe](https://twitter.com/juliancapo98), baja un cambio convierte el texto para que sea más calmado.
+[Use it here](https://latex.felipelecot.com)
 
-[Úsalo gratis acá](https://bajauncambio.felipelecot.com)
-
-# Integración
-- OpenAI's gpt-3.5-turbo model
+# Integration
+- OpenAI's gpt-4-vision
 - Express Node.js server
 - HTMX library (Go Hypermedia)
 - Hosted on AWS EC2
